@@ -69,7 +69,7 @@ class AuthController extends Controller
             }
             return $this->sendResponse("Incorrect password entered!", '', 404);
         }
-        return $this->sendResponse("Please enter a valid email/password!", '', 404);
+        return $this->sendResponse("User with provided email address does not exists!", '', 404);
     }
 
 

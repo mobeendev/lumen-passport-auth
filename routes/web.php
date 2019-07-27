@@ -8,7 +8,6 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('/register', 'AuthController@register');
 
     $router->group(['middleware' => 'auth'], function () use ($router) {
-        $router->get('/users', 'UsersController@index');
-
+        $router->get('/users/{id}', 'UsersController@show');
     });
 });
